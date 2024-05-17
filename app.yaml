@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fibonacci-deployment
+  labels:
+    app: fibonacci
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fibonacci
+  template:
+    metadata:
+      labels:
+        app: fibonacci
+    spec:
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      containers:
+      - name: fibonacci
+        image: maan25/fibanacci:latest
+        ports:
+        - containerPort: 5000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/backend-protocol: http
+    nginx.ingress.kubernetes.io/enable-access-log: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  labels:
+    app: fibonacci
+  name: fibonacci
+spec:
+  rules:
+  - host: fibonacci.platdev2-cust-eastus.bentleyhosted.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: fibonacci-deployment
+            port:
+              number: 5000
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - fibonacci.platdev2-cust-eastus.bentleyhosted.com
+    secretName: fibonacci-tls
+
+
+
