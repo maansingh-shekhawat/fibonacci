@@ -98,12 +98,12 @@ Deploys the updated images to your Kubernetes cluster.
 
 
 
-Implement monitoring and logging solutions:
+**Implement monitoring and logging solutions:**
 We can use  tools like Prometheus, Grafana to  monitor resource utilization, response times, and error rates.
 Set up alerts for critical events.
 
 
-Consider implementing rollbacks:
+**Consider implementing rollbacks:**
 If a deployment fails or causes issues, roll back to the previous version using Kubernetes Rolling Updates or Blue-Green Deployments.
 
 
