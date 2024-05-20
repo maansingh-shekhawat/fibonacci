@@ -1,5 +1,5 @@
 <h1 align="center"> Fibonacci Sequence  Flask API
-<img aligh ="center" alt="Fibonacci Sequence" width="300" src="https://giphy.com/gifs/rainbow-rabbit-retrocollage-xT39D6DSXbWoIigOxq"
+<img aligh ="center" alt="Fibonacci Sequence" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkGjOhjTCp_Tp0-qc-YITj_yfvhW4IxNZIig&usqp=CAU"
 ## Overview
 This project consists of a Flask API that calculates the nth Fibonacci number. It includes Docker and Kubernetes configurations for deployment.
 
