@@ -48,7 +48,7 @@ The fibonacci(n) function calculates the nth Fibonacci number.
 If n is less than or equal to 0, it returns a message indicating that the input should be a positive integer.
 The function retrieves the value of the query parameter n (defaulting to 1 if not provided).
 
-#Logging is enabled using below
+##Logging is enabled using below
 
 file_handler: Logs messages to a file named “app.log”.
 
@@ -56,7 +56,7 @@ stream_handler: Logs messages to the console (standard output).
 
 this creates app.log file which generates  the logs 
 as Generated Fibonacci number for n=%s, result=%s'
-
+we can use fluntd  data collector which can ship these logs to prometheus and grafana
 
 ## Running Locally
 To run the Flask application locally:
