@@ -1,4 +1,4 @@
-# Fibonacci Sequence  Flask API
+<h1 align="center"> Fibonacci Sequence  Flask API
 
 ## Overview
 This project consists of a Flask API that calculates the nth Fibonacci number. It includes Docker and Kubernetes configurations for deployment.
