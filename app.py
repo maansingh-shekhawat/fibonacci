@@ -1,6 +1,23 @@
+import logging
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
+
+# Set up logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+# Create a file handler
+file_handler = logging.FileHandler('app.log')
+file_handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] - %(message)s'))
+
+# Create a stream handler
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] - %(message)s'))
+
+# Add the handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 def fibonacci(n):
     if n <= 0:
@@ -10,15 +27,7 @@ def fibonacci(n):
     elif n == 2:
         return 1
     else:
-        a, b = 1,1
+        a, b = 1, 1
         for _ in range(n - 2):
             a, b = b, a + b
         return b
-
-@app.route('/fibonacci', methods=['GET'])
-def get_fibonacci():
-    n = request.args.get('n', default = 1, type = int)
-    return jsonify(fibonacci(n))
-
-if __name__ == '__main__':
-    app.run(debug=True)
