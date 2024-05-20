@@ -74,7 +74,7 @@ To apply this Kubernetes configuration to your cluster, follow these steps:
 4.	TLS Certificate:
 	Verify that the TLS certificate is correctly associated with the ingress.
 5.	Access the Application:
-	Open a web browser and navigate to https://fibonacci.platdev2-cust-eastus.bentleyhosted.com/fibonacci?n=-10
+	Open a web browser and navigate to https://fibonacci.platdev2-cust-eastus.bentleyhosted.com/fibonacci?n=10
 	You should see your Fibonacci application running!
  
 
