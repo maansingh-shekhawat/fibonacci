@@ -78,7 +78,7 @@ To apply this Kubernetes configuration to your cluster, follow these steps:
 	You should see your Fibonacci application running!
  
 
-##Setting up a CI/CD pipeline with Kubernetes involves automating the build, test, and deployment processes for your applications running on Kubernetes clusters. 
+Setting up a CI/CD pipeline with Kubernetes involves automating the build, test, and deployment processes for your applications running on Kubernetes clusters. 
 
 1. Kubernetes Cluster Preparation:
 Ensure you have a Kubernetes cluster ready. You can use tools like Minikube for local development or a managed Kubernetes service like Azure Kubernetes Service (AKS) for production.
