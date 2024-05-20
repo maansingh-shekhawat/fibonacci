@@ -3,8 +3,7 @@
 ## Overview
 This project consists of a Flask API that calculates the nth Fibonacci number. It includes Docker and Kubernetes configurations for deployment.
 
-
-##Files
+	##Files
 - Dockerfile: Contains the instructions to build the Docker image for the Flask API.
 - app.py: The Flask application that defines the Fibonacci API.
 - app.yaml: Kubernetes deployment and Ingress configuration for the Flask API.
