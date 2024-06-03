@@ -18,7 +18,7 @@ spec:
         beta.kubernetes.io/os: linux
       containers:
       - name: fibonacci
-        image: maan25/fibanacci:latest
+        image: maan25/fibo:version1.0
         ports:
         - containerPort: 5000
 ---
