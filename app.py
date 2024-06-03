@@ -31,3 +31,14 @@ def fibonacci(n):
         for _ in range(n - 2):
             a, b = b, a + b
         return b
+
+@app.route('/fibonacci', methods=['GET'])
+def get_fibonacci():
+    n = request.args.get('n', default=1, type=int)
+    result = fibonacci(n)
+    logger.info('Generated Fibonacci number for n=%s, result=%s', n, result)
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
